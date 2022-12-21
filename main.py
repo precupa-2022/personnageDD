@@ -18,13 +18,18 @@ class Caracteristiques:
     charisme: int
 
 
-personnage = Caracteristiques(random.randint(1, 20), random.randint(1, 20), random.randint(1, 20),
-                              random.randint(1, 20), random.randint(1, 20), random.randint(1, 20))
+class Stats:
+    def __init__(self):
+        self.personnage = Caracteristiques(random.randint(1, 20), random.randint(1, 20), random.randint(1, 20),
+                                           random.randint(1, 20), random.randint(1, 20), random.randint(1, 20))
+
+
+stats = Stats()
 
 # afficher les caractéristiques du personnage
-print(f"Force           : {personnage.force}")
-print(f"Dexterite       : {personnage.dexterite}")
-print(f"Constitution    : {personnage.constitution}")
-print(f"Intelligence    : {personnage.intelligence}")
-print(f"Sagesse         : {personnage.sagesse}")
-print(f"Charisme        : {personnage.charisme}")
+print(f"Force           : {stats.personnage.force}")
+print(f"Dexterite       : {stats.personnage.dexterite}")
+print(f"Constitution    : {stats.personnage.constitution}")
+print(f"Intelligence    : {stats.personnage.intelligence}")
+print(f"Sagesse         : {stats.personnage.sagesse}")
+print(f"Charisme        : {stats.personnage.charisme}")
