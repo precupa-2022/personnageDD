@@ -10,18 +10,22 @@ import random
 
 @dataclass
 class Caracteristiques:
-    force: int
-    dexterite: int
-    constitution: int
-    intelligence: int
-    sagesse: int
-    charisme: int
+    """
+     Classe Caracteristiques
+        dataclass attributs de type statistique force, dexterite, constitution, intelligence, sagesse, charisme
+        avec des valeurs initiales un numéro aléatoire de 1 a 20
+    """
+    force: int = random.randint(1, 20)
+    dexterite: int = random.randint(1, 20)
+    constitution: int = random.randint(1, 20)
+    intelligence: int = random.randint(1, 20)
+    sagesse: int = random.randint(1, 20)
+    charisme: int = random.randint(1, 20)
 
 
 class Stats:
     def __init__(self):
-        self.personnage = Caracteristiques(random.randint(1, 20), random.randint(1, 20), random.randint(1, 20),
-                                           random.randint(1, 20), random.randint(1, 20), random.randint(1, 20))
+        self.personnage = Caracteristiques()
 
 
 stats = Stats()
